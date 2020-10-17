@@ -26,5 +26,5 @@
 
 * Checkout this project
 * Open the project in IntelliJ or similar editor
-* Perform `mvn clean install` from root (dropbox-tests) directory
+* Perform `mvn clean install` from root (koofr) directory
 * Perform `mvn test` to execute tests
