@@ -1,0 +1,8 @@
+com/automatedtest/KoofrCucumberTest.class
+com/automatedtest/infrastructure/driver/Setup.class
+com/automatedtest/pages/HomePage.class
+com/automatedtest/steps/KoofrTestSteps.class
+com/automatedtest/infrastructure/driver/Helper.class
+com/automatedtest/basepage/BasePage.class
+com/automatedtest/pages/LoginPage.class
+com/automatedtest/infrastructure/driver/TearDown.class

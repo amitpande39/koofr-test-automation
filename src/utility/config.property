@@ -1,0 +1,5 @@
+chromeDriverPath=./src/utility/chromedriver
+baseURL=https://app.koofr.net/login
+documentPath=src/test/java/com/automatedtest/testdata/
+chromeDriver=webdriver.chrome.driver
+waitTime=30

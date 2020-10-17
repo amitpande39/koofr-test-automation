@@ -1,0 +1,124 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-10-17T12:29:42.837Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2868048000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.automatedtest.infrastructure.driver.Setup.setWebDriver()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Create a new folder and upload two documents",
+        "description": "",
+        "id": "koofr-upload-document-testing;create-a-new-folder-and-upload-two-documents",
+        "after": [
+          {
+            "result": {
+              "duration": 109250000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.automatedtest.infrastructure.driver.TearDown.quitDriver(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2813867000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I navigate to koofr login page",
+            "match": {
+              "location": "com.automatedtest.steps.KoofrTestSteps.i_navigate_to_koofr_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5028951000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I enter email address in email field with \"amitpande1899@gmail.com\" and password with \"chiki3939\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "amitpande1899@gmail.com",
+                  "offset": 43
+                },
+                {
+                  "val": "chiki3939",
+                  "offset": 87
+                }
+              ],
+              "location": "com.automatedtest.steps.KoofrTestSteps.enterCredential(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 635453000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I create a new folder \"Bills\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Bills",
+                  "offset": 23
+                }
+              ],
+              "location": "com.automatedtest.steps.KoofrTestSteps.i_create_a_new_folder_something(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5740287000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I upload \"2\" documents, \"MobileBill.pdf\" and \"ElectricityBill.pdf\" into the new folder successfully",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 10
+                },
+                {
+                  "val": "MobileBill.pdf",
+                  "offset": 25
+                },
+                {
+                  "val": "ElectricityBill.pdf",
+                  "offset": 46
+                }
+              ],
+              "location": "com.automatedtest.steps.KoofrTestSteps.i_upload_something_documents_something_and_something_into_the_new_folder_successfully(int,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Koofr Upload Document Testing",
+    "description": "",
+    "id": "koofr-upload-document-testing",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/com/koofr/feature/Koofr.feature",
+    "tags": []
+  }
+]
