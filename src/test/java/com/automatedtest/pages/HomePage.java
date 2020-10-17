@@ -99,8 +99,6 @@ public class HomePage  extends BasePage {
 
 
 
-
-
     public HomePage() {
         PageFactory.initElements(driver, this);
     }
@@ -153,7 +151,6 @@ public class HomePage  extends BasePage {
         helper.waitForElementToDisplay(this.emptyFolderText,"Element to Assert Deletion");
         Assert.assertEquals("This folder is empty.",this.emptyFolderText.getText());
         this.logout();
-
     }
 
     private void logout(){
@@ -161,7 +158,6 @@ public class HomePage  extends BasePage {
         this.selectActionFromMenu("Sign out");
         helper.waitForElementToDisplay(this.signInButton,"SignIn Button");
         Assert.assertEquals("Sign In",this.signInButton.getText());
-
     }
 
     public void validateUploadedDocuments(int numOfDocuments) {
