@@ -16,18 +16,6 @@ public class HomePage  extends BasePage {
     @FindBy(css = ".l-user-icon")
     private WebElement userIcon;
 
-    @FindBy(linkText = "log in")
-    private WebElement loginLink;
-
-    @FindBy(id = "email")
-    private WebElement enterEmail;
-
-    @FindBy(id = "password")
-    private WebElement password;
-
-    @FindBy(css = "button[type='submit']")
-    private WebElement signIn;
-
     @FindBy(css = ".l-navbar-nav-item--add")
     private WebElement addButton;
 
@@ -36,12 +24,6 @@ public class HomePage  extends BasePage {
 
     @FindBy(css = ".text-input")
     private WebElement folderNameInput;
-
-    @FindBy(css= ".button--primary")
-    private WebElement clickCreateFolderButton;
-
-    @FindBy(css = ".l-menu__text")
-    private List<WebElement> optionMenu;
 
     @FindBy(css = "div.l-menu__text")
     private List<WebElement> optionsList;
@@ -57,12 +39,6 @@ public class HomePage  extends BasePage {
 
     @FindBy(css = ".l-files-table__file-name")
     private List<WebElement> uploadedDoc;
-
-    @FindBy(css = ".l-uploads-summary__time")
-    private WebElement uploadingTime;
-
-    @FindBy(css = ".l-table__main")
-    private List<WebElement> uploadedDocumentCount;
 
     @FindBy(css = ".l-dashboard-sidenav__menu-item--hosted")
     private WebElement selectKoofr;
@@ -82,9 +58,6 @@ public class HomePage  extends BasePage {
     @FindBy(css = ".l-files-table__file-name-link")
     private WebElement folderName;
 
-    @FindBy(css= ".l-uploads-summary__time-numbers")
-    private WebElement uploadDocTimerDisappear;
-
     @FindBy(css = "div.l-table__body >div:nth-child(2)")
     private WebElement secondUploadedDoc;
 
@@ -96,8 +69,6 @@ public class HomePage  extends BasePage {
 
     @FindBy(css = ".l-form__button")
     private WebElement signInButton;
-
-
 
     public HomePage() {
         PageFactory.initElements(driver, this);
@@ -117,13 +88,13 @@ public class HomePage  extends BasePage {
     }
 
     public void createNewFolder(String folderName) {
-        this.addButton.click();
-        this.selectActionFromMenu("Create folder");
-        this.modalTitle.getText().equalsIgnoreCase("Enter new folder name");
-        this.folderNameInput.clear();
-        this.folderNameInput.sendKeys(folderName + Keys.TAB);
-        this.createFolder.click();
-        this.folder.getText().equalsIgnoreCase(folderName);
+        addButton.click();
+        selectActionFromMenu("Create folder");
+        modalTitle.getText().equalsIgnoreCase("Enter new folder name");
+        folderNameInput.clear();
+        folderNameInput.sendKeys(folderName + Keys.TAB);
+        createFolder.click();
+        folder.getText().equalsIgnoreCase(folderName);
     }
 
     public void openFolder() {
@@ -136,33 +107,33 @@ public class HomePage  extends BasePage {
     }
 
     public void uploadFile(String docName) {
-        this.addButton.click();
-        this.selectActionFromMenu("Upload file");
-        this.uploadElement.sendKeys(getPath() + "/" + docName);
+        addButton.click();
+        selectActionFromMenu("Upload file");
+        uploadElement.sendKeys(getPath() + "/" + docName);
     }
 
     public void cleanUp() {
-        this.selectKoofr.click();
+        selectKoofr.click();
         helper.waitForElementToDisplay(this.folderName, "Folder Name");
-        this.tableHeadCheckbox.click();
-        this.deleteButton.click();
+        tableHeadCheckbox.click();
+        deleteButton.click();
         helper.waitForElementToDisplay(this.deleteModalTitle, "Delete Modal Pop-up");
-        this.confirmDelete.click();
+        confirmDelete.click();
         helper.waitForElementToDisplay(this.emptyFolderText,"Element to Assert Deletion");
         Assert.assertEquals("This folder is empty.",this.emptyFolderText.getText());
-        this.logout();
+        logout();
     }
 
     private void logout() {
-        this.profileImage.click();
-        this.selectActionFromMenu("Sign out");
+        profileImage.click();
+        selectActionFromMenu("Sign out");
         helper.waitForElementToDisplay(this.signInButton,"SignIn Button");
         Assert.assertEquals("Sign In",this.signInButton.getText());
     }
 
     public void validateUploadedDocuments(int numOfDocuments) {
-        this.selectKoofr.click();
-        this.folderName.click();
+        selectKoofr.click();
+        folderName.click();
         helper.waitForElementToDisplay(this.secondUploadedDoc, "second doc");
         Assert.assertEquals(numOfDocuments, getDocumentList().size());
     }
