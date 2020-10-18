@@ -30,7 +30,7 @@
 * Perform `mvn test` to execute tests
 
 # Improvements/Limitation
-* At the moment, default native window dialog does not close however it does not interfere with the page actions 
+* At the moment, default native window dialog does not close after document upload however it does not interfere with the page actions 
 and test execute successfully.
 
 # Troubleshooting
