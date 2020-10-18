@@ -5,7 +5,7 @@
 - Login
 - Create New Folder
 - Upload multiple Documents (2 documents)
-- Clean up - Delete a folder containing documents
+- Clean up - Delete the folder containing documents
 - Logout
 - Assertions
   - User logged in successfully
@@ -16,7 +16,7 @@
 
 # Assumption
 
-- I have developed this project on Mac machine so have not test it on windows OS.
+- I have developed this project on Mac machine so have not tested it on windows OS.
 
 # Test Execution
 
@@ -30,12 +30,11 @@
 * Perform `mvn test` to execute tests
 
 # Improvements/Limitation
-* At the moment, default native window dialog does open with the document upload however the test does upload multiple
-documents and all the required assertions before log out.   
-
+* At the moment, default native window dialog does not close however it does not interfere with the page actions 
+and test execute successfully.
 
 # Troubleshooting
 * if you are using MAC and get chromedriver related error
 then you need to give permission to access `ChromeDriver`
 from `System Preference` >> `Security & Privacy`  >> `Allow apps to download` 
-and select "App store and identified developers"
+and select `App store and identified developers`
