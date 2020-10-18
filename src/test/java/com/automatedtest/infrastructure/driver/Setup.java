@@ -21,17 +21,18 @@ public class Setup {
             properties = new Properties();
             properties.load(input);
         }
+
         String browser = System.getProperty("browser");
         if (browser == null) {
             browser = "chrome";
         }
+
         switch (browser) {
             case "chrome":
                 System.setProperty(properties.getProperty("chromeDriver"), properties.getProperty("chromeDriverPath"));
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("['start-maximized']");
                 driver = new ChromeDriver(chromeOptions);
-
                 break;
             case "firefox":
                 driver = new FirefoxDriver();

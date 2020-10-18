@@ -153,7 +153,7 @@ public class HomePage  extends BasePage {
         this.logout();
     }
 
-    private void logout(){
+    private void logout() {
         this.profileImage.click();
         this.selectActionFromMenu("Sign out");
         helper.waitForElementToDisplay(this.signInButton,"SignIn Button");

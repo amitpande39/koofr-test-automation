@@ -1,6 +1,5 @@
 package com.automatedtest.infrastructure.driver;
 
-import com.automatedtest.pages.HomePage;
 import io.cucumber.java.After;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;

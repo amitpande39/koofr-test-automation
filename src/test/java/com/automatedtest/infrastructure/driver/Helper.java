@@ -17,9 +17,9 @@ public class Helper {
         this.driver = driver;
     }
 
-    public String readConfigFile(String s)   {
+    public String readConfigFile(String s) {
         Properties properties = new Properties();
-        try{
+        try {
             InputStream in =new FileInputStream("./src/utility/config.property");
             properties.load(in);
         }
