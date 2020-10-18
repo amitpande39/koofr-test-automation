@@ -28,3 +28,14 @@
 * Open the project in IntelliJ or similar editor
 * Perform `mvn clean install` from root (koofr) directory
 * Perform `mvn test` to execute tests
+
+# Improvements/Limitation
+* At the moment, default native window dialog does open with the document upload however the test does upload multiple
+documents and all the required assertions before log out.   
+
+
+# Troubleshooting
+* if you are using MAC and get chromedriver related error
+then you need to give permission to access `ChromeDriver`
+from `System Preference` >> `Security & Privacy`  >> `Allow apps to download` 
+and select "App store and identified developers"
